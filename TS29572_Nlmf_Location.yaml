@@ -940,6 +940,13 @@ components:
       oneOf:
         - $ref: '#/components/schemas/Local2dPointUncertaintyEllipse'
         - $ref: '#/components/schemas/Local3dPointUncertaintyEllipsoid'
+      required:
+        - shape
+      properties:
+        shape:
+          $ref: '#/components/schemas/SupportedGADShapes'
+      discriminator:
+        propertyName: shape
 
     UeAreaIndication:
       description: Indicates area (country, area in a country or international area) where UE is located
