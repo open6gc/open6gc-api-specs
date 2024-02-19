@@ -1421,7 +1421,7 @@ components:
         nfSetId:
           $ref: 'TS29571_CommonData.yaml#/components/schemas/NfSetId'
         nfStatus:
-          $ref: '#/components/schemas/NfStatus'
+          $ref: '#/components/schemas/NFStatusSamplingRatio'
         nfCpuUsage:
           type: integer
         nfMemoryUsage:
@@ -1449,7 +1449,7 @@ components:
           - required: [nfLoadLevelAverage]
           - required: [nfLoadLevelPeak]
 
-    NfStatus:
+    NFStatusSamplingRatio:
       description: Contains the percentage of time spent on various NF states.
       type: object
       properties:
