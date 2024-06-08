@@ -4,13 +4,13 @@ info:
   title: EES ACR Management Event_API
   description: |
     API for EES ACR Management Event.  
-    © 2023, 3GPP Organizational Partners (ARIB, ATIS, CCSA, ETSI, TSDSI, TTA, TTC).  
+    © 2024, 3GPP Organizational Partners (ARIB, ATIS, CCSA, ETSI, TSDSI, TTA, TTC).  
     All rights reserved.
-  version: 1.1.0-alpha.5
+  version: 1.1.0-alpha.6
 
 externalDocs:
   description: >
-    3GPP TS 29.558 V18.4.0 Enabling Edge Applications;
+    3GPP TS 29.558 V18.5.0 Enabling Edge Applications;
     Application Programming Interface (API) specification; Stage 3
   url: https://www.3gpp.org/ftp/Specs/archive/29_series/29.558/
 
@@ -569,6 +569,8 @@ components:
           $ref: '#/components/schemas/ACRParameters'
         acId:
           type: string
+        ueId:
+          $ref: '#/components/schemas/TargetUeIdentification'
         selACRScen:
           type: array
           items:
@@ -616,6 +618,8 @@ components:
       properties:
         gpsi:
           $ref: 'TS29571_CommonData.yaml#/components/schemas/Gpsi'
+        edgeUeId:
+          type: string
         intGrpId:
           $ref: 'TS29571_CommonData.yaml#/components/schemas/GroupId'
         extGrpId:
@@ -624,6 +628,7 @@ components:
           $ref: 'TS29571_CommonData.yaml#/components/schemas/IpAddr'
       oneOf:
         - required: [gpsi]
+        - required: [edgeUeId]
         - required: [intGrpId]
         - required: [extGrpId]
         - required: [ueIpAddr]
@@ -754,6 +759,8 @@ components:
           minItems: 1
         svcArea:
           $ref: 'TS29558_Eecs_EESRegistration.yaml#/components/schemas/ServiceArea'
+      required:
+        - easId
 
 #
 # ENUMERATIONS DATA TYPES

@@ -52,20 +52,17 @@ comment       = "(" *( [ FWS ] ccontent ) [ FWS ] ")"
 ;   RFC 9110
 ; ----------------------------------------
 
-OWS      = *( SP / HTAB )
+OWS        = *( SP / HTAB )
 
-tchar    = "!" / "#" / "$" / "%" / "&" / "'" / "*" / "+" / "-"
-         / "." / "^" / "_" / "`" / "|" / "~" / DIGIT / ALPHA
+tchar      = "!" / "#" / "$" / "%" / "&" / "'" / "*" / "+" / "-"
+           / "." / "^" / "_" / "`" / "|" / "~" / DIGIT / ALPHA
 
-token    = 1*tchar
+token      = 1*tchar
 
-obs-text = %x80-FF
+obs-text   = %x80-FF
 
 
 
-; ----------------------------------------
-;   RFC 9110
-; ----------------------------------------
 
 entity-tag = [ weak ] opaque-tag
 
@@ -80,9 +77,9 @@ etagc      = %x21 / %x23-7E / obs-text ; VCHAR except double quotes, plus obs-te
 ; ----------------------------------------
 ;   3GPP TS 29.504
 ;
-;   Version: 18.3.0 (September 2023)
+;   Version: 18.5.0 (March 2024)
 ;
-;   (c) 2023, 3GPP Organizational Partners (ARIB, ATIS, CCSA, ETSI, TSDSI, TTA, TTC).
+;   (c) 2024, 3GPP Organizational Partners (ARIB, ATIS, CCSA, ETSI, TSDSI, TTA, TTC).
 ; ----------------------------------------
 
 ;

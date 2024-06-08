@@ -232,7 +232,7 @@ token68        = 1*( ALPHA / DIGIT / "-" / "." / "_" / "~" / "+" / "/" ) *"="
 ; ----------------------------------------
 ;   3GPP TS 29.500
 ;
-;   Version: 18.4.0 (December 2023)
+;   Version: 18.5.0 (March 2024)
 ;
 ;   (c) 2023, 3GPP Organizational Partners (ARIB, ATIS, CCSA, ETSI, TSDSI, TTA, TTC).
 ; ----------------------------------------
@@ -745,6 +745,9 @@ req-param-name          = "retrans"
                         / "idempotency-key"
                         / "receivedrejectioncause"
                         / "callback-uri-prefix"
+                        / "nfinst"
+                        / "nfservinst"
+                        / "redirection-cause"
                         / token
 
 req-param-value         = token
