@@ -933,8 +933,6 @@ components:
       properties:
         upLocRepAfInd:
           type: boolean
-          enum:
-            - true
         upLocRepAddrAf:
           $ref: 'TS29122_MonitoringEvent.yaml#/components/schemas/UpLocRepAddrAfRm'
         upCumEvtRptCriteria:

@@ -248,6 +248,7 @@ components:
 
     Uinteger:
       type: integer
+      format: int64
       minimum: 0
       description: Unsigned Integer, i.e. only value 0 and integers above 0 are permissible.
 
@@ -3374,8 +3375,6 @@ components:
             When present, it shall be set to true, to indicate that all SD values are supported for
             the Slice/Service Type value indicated in the sst attribute of the Snssai data type.
           type: boolean
-          enum:
-            - true
 
     SdRange:
       description: A range of SDs (Slice Differentiators)
@@ -3729,8 +3728,7 @@ components:
         repPeriod:
           $ref: '#/components/schemas/DurationSec'
         percValueNfLoad:
-          allOf:
-            - $ref: '#/components/schemas/Uinteger'
+          type: integer
           minimum: 0
           maximum: 100
       required:

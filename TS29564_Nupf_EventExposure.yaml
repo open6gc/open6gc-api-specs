@@ -469,8 +469,6 @@ components:
           $ref: 'TS29571_CommonData.yaml#/components/schemas/Uint32'
         measureFailure:
           type: boolean
-          enum:
-           - true
         dlAveThroughput:
           $ref: 'TS29571_CommonData.yaml#/components/schemas/BitRate'
         ulAveThroughput:

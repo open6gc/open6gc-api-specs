@@ -652,8 +652,6 @@ components:
           $ref: 'TS29571_CommonData.yaml#/components/schemas/AccessType'
         purged:
           type: boolean
-          enum:
-           - true
 
     CnTypeChangeReport:
       type: object
